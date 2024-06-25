@@ -1,0 +1,11 @@
+#define KERNEL_SIZE_1 3
+float first_convolution[KERNEL_SIZE_1][KERNEL_SIZE_1];
+first_convolution[0][0]=-0.06962999701499939;
+first_convolution[0][1]=0.5331646800041199;
+first_convolution[0][2]=-0.199904203414917;
+first_convolution[1][0]=0.3026471436023712;
+first_convolution[1][1]=0.5846962928771973;
+first_convolution[1][2]=0.3332327604293823;
+first_convolution[2][0]=-0.17035962641239166;
+first_convolution[2][1]=0.05097603052854538;
+first_convolution[2][2]=0.2782385051250458;

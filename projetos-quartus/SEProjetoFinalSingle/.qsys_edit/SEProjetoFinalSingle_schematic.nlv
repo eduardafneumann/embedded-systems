@@ -1,0 +1,18 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst SEProjetoFinalSingle.SDRAM -pg 1 -lvl 3 -y 70
+preplace inst SEProjetoFinalSingle.CPU0 -pg 1 -lvl 2 -y 110
+preplace inst SEProjetoFinalSingle.CPU0.cpu -pg 1
+preplace inst SEProjetoFinalSingle.CPU0.reset_bridge -pg 1
+preplace inst SEProjetoFinalSingle -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst SEProjetoFinalSingle.clk_0 -pg 1 -lvl 1 -y 80
+preplace inst SEProjetoFinalSingle.UART0 -pg 1 -lvl 3 -y 150
+preplace inst SEProjetoFinalSingle.CPU0.clock_bridge -pg 1
+preplace netloc EXPORT<net_container>SEProjetoFinalSingle</net_container>(SLAVE)SEProjetoFinalSingle.clk,(SLAVE)clk_0.clk_in) 1 0 1 N
+preplace netloc POINT_TO_POINT<net_container>SEProjetoFinalSingle</net_container>(SLAVE)clk_0.clk_in_reset,(MASTER)CPU0.debug_reset_request) 1 0 3 60 70 NJ 70 660
+preplace netloc INTERCONNECT<net_container>SEProjetoFinalSingle</net_container>(SLAVE)CPU0.debug_mem_slave,(SLAVE)UART0.avalon_jtag_slave,(MASTER)CPU0.data_master,(SLAVE)SDRAM.s1,(MASTER)CPU0.instruction_master) 1 1 2 300 50 680
+preplace netloc FAN_OUT<net_container>SEProjetoFinalSingle</net_container>(SLAVE)CPU0.clk,(MASTER)clk_0.clk,(SLAVE)UART0.clk,(SLAVE)SDRAM.clk1) 1 1 2 280 30 700
+preplace netloc FAN_OUT<net_container>SEProjetoFinalSingle</net_container>(SLAVE)CPU0.reset,(SLAVE)SDRAM.reset1,(SLAVE)UART0.reset,(MASTER)clk_0.clk_reset) 1 1 2 260 250 720
+preplace netloc POINT_TO_POINT<net_container>SEProjetoFinalSingle</net_container>(MASTER)CPU0.irq,(SLAVE)UART0.irq) 1 2 1 N
+levelinfo -pg 1 0 30 900
+levelinfo -hier SEProjetoFinalSingle 40 90 420 750 890

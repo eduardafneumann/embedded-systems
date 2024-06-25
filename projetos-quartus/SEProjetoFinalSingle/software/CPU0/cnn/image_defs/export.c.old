@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+#include "image9.txt"
+
+    for (int i = 0; i < IMAGE_SIZE; i++) {
+        for (int j = 0; j < IMAGE_SIZE; j++) {
+            if (image[i][j] == 0.0f) {
+                printf("0.0 ");
+            } else {
+                printf("%f ", image[i][j]);
+            }
+        }
+        printf("\n");
+    }
+}

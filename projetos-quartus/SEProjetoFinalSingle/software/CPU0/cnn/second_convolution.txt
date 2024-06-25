@@ -1,0 +1,11 @@
+#define KERNEL_SIZE_2 3
+float second_convolution[KERNEL_SIZE_2][KERNEL_SIZE_2];
+second_convolution[0][0]=0.06767615675926208;
+second_convolution[0][1]=0.16121777892112732;
+second_convolution[0][2]=-0.5150718688964844;
+second_convolution[1][0]=0.6256189942359924;
+second_convolution[1][1]=0.06374060362577438;
+second_convolution[1][2]=0.5542667508125305;
+second_convolution[2][0]=0.21270418167114258;
+second_convolution[2][1]=0.2348145991563797;
+second_convolution[2][2]=0.20258492231369019;
