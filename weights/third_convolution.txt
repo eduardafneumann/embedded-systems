@@ -1,0 +1,11 @@
+#define KERNEL_SIZE_3 3
+float third_convolution[KERNEL_SIZE_3][KERNEL_SIZE_3];
+third_convolution[0][0]=0.3219511806964874;
+third_convolution[0][1]=0.3230555057525635;
+third_convolution[0][2]=0.059257298707962036;
+third_convolution[1][0]=-0.0015089865773916245;
+third_convolution[1][1]=0.12861424684524536;
+third_convolution[1][2]=0.2061631679534912;
+third_convolution[2][0]=0.5303698182106018;
+third_convolution[2][1]=-0.15098410844802856;
+third_convolution[2][2]=-0.39789310097694397;
